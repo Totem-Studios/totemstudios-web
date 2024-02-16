@@ -1,77 +1,83 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Totem Studios</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <title>Under Construction</title>
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        background-image: url('https://clipart-library.com/images/zcX5Bpddi.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        text-align: center;
+        position: relative; /* Added to position the peeking GIF */
+      }
+
+      .container {
+        max-width: 600px;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        border: 0.25rem dashed rgb(254, 221, 5);
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      p {
+        color: #555;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 20px;
+      }
+
+      .peeking-gif {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 60px;
+        width: 60px;
+        animation: peekAnimation 6s infinite; /* Adjusted to 15s for full cycle */
+      }
+
+      @keyframes peekAnimation {
+        0%,
+        100% {
+          transform: translateY(100%);
+        }
+        10%,
+        90% {
+          transform: translateY(0);
+        }
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <h1 style="color: #9a755b">Totem Studios</h1>
-    </header>
-
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="software.html">Software</a>
-      <a href="projects.html">Projects</a>
-      <a href="contacts.html">Contact</a>
-    </nav>
-
-    <section id="home">
-      <h2>Welcome to Totem Studios</h2>
-      <p>
-        Your platform for innovation and creativity in programming and game
-        development.
-      </p>
+    <div class="container">
+      <h1>Under Construction</h1>
+      <p>We're currently working on our website. Please check back later!</p>
       <img
-        src="https://cdn.discordapp.com/attachments/1029281358796836944/1186844545967726692/image.png?ex=6594ba1e&is=6582451e&hm=7e382c93fbd61a333d2d6760573a5265fc4c3d40e728074fcf7a056425b5fa7a&"
-        alt="Home Image"
-        style="width: 100%; max-width: 800px; margin-top: 20px"
+        src="https://c.tenor.com/BbfKJfP43RwAAAAC/tenor.gif"
+        alt="Under Construction"
       />
-    </section>
-
-    <section id="about">
-      <h2>About Us</h2>
-      <p>
-        Discover the story behind Totem Studios and our commitment to pushing
-        the boundaries of technology.
-      </p>
-      <img
-        src="https://cdn.discordapp.com/attachments/1029281358796836944/1186844545967726692/image.png?ex=6594ba1e&is=6582451e&hm=7e382c93fbd61a333d2d6760573a5265fc4c3d40e728074fcf7a056425b5fa7a&"
-        alt="About Image"
-        style="width: 100%; max-width: 800px; margin-top: 20px"
-      />
-    </section>
-
-    <section id="projects">
-      <h2>Our Projects</h2>
-      <p>
-        Explore the exciting projects we're working on, including our custom
-        programming language and engine.
-      </p>
-      <img
-        src="https://cdn.discordapp.com/attachments/1029281358796836944/1186844545967726692/image.png?ex=6594ba1e&is=6582451e&hm=7e382c93fbd61a333d2d6760573a5265fc4c3d40e728074fcf7a056425b5fa7a&"
-        alt="Projects Image"
-        style="width: 100%; max-width: 800px; margin-top: 20px"
-      />
-    </section>
-
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p>
-        Reach out to us for inquiries, collaborations, or just to say hello.
-      </p>
-      <img
-        src="https://cdn.discordapp.com/attachments/1029281358796836944/1186844545967726692/image.png?ex=6594ba1e&is=6582451e&hm=7e382c93fbd61a333d2d6760573a5265fc4c3d40e728074fcf7a056425b5fa7a&"
-        alt="Contact Image"
-        style="width: 100%; max-width: 800px; margin-top: 20px"
-      />
-    </section>
-
-    <footer>
-      <p>&copy; 2023 Totem Studios. All rights reserved.</p>
-    </footer>
+    </div>
+    <img
+      class="peeking-gif"
+      src="https://media1.tenor.com/m/jysc1QyPQjsAAAAd/cat-dance.gif"
+      alt="Peeking GIF"
+    />
   </body>
 </html>
