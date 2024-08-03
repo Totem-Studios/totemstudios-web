@@ -1,28 +1,46 @@
 :root {
   --light-blue-clr: #0a5580;
+  --soft-grey: #4a4742;
+  --soft-yellowish: #ffce8d;
+  --light-grey-clr: #7a7a7a;
   --dark-blue-clr: #041723;
   --beige-clr: #f8eddf;
   --white-clr: #fff;
+  --coal-clr: #1e1e1e;
+  --open-sans-ss: "Open Sans", sans-serif;
+  --segoe-ui: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  --navbar-height: 80px;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--segoe-ui);
 }
 
 body {
-  background-color: var(--dark-blue-clr);
+  background-color: var(--coal-clr);
+  display: flex;
+  justify-content: center;
+  color: var(--dark-blue-clr);
+}
+
+div.container {
+  background-color: var(--beige-clr);
 }
 
 nav {
+  position: sticky;
+  top: 0;
   background-color: var(--beige-clr);
   height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 40px;
+  box-shadow: -1rem 0 3rem var(--light-grey-clr);
 }
 
 nav a {
@@ -55,30 +73,187 @@ a {
   color: var(--dark-blue-clr);
 }
 
-main {
-  padding: 2rem;
-  color: var(--white-clr);
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+/* Styling */
+
+.italic {
+  font-style: italic;
 }
 
-main section,
-main section ul {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-footer {
-  padding: 20px 40px;
-  background-color: var(--beige-clr);
-  display: flex;
-  justify-content: space-between;
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 @media screen and (min-width: 600px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  body {
+    width: 100%;
+  }
+
+  div.container {
+    width: 100%;
+    /* background: url("./media/images/mountain-lake-landscape.jpg"); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav {
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    box-shadow: none;
+    width: 100%;
+  }
+
+  nav a img {
+    background-color: var(--beige-clr);
+    padding: 5px;
+    border-radius: 10px;
+  }
+
+  nav a {
+    color: var(--beige-clr);
+  }
+
   a.logo span {
     display: block;
+  }
+
+  img.background {
+    width: 100%;
+    margin-top: calc(-1 * (var(--navbar-height) + 10px));
+  }
+
+  div.partner-scroller {
+    margin-top: -50px;
+    overflow: hidden;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+
+  div.partner-scroller ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    animation: scroll 20s linear infinite;
+  }
+
+  div.partner-scroller ul li img {
+    width: 100px;
+    border-radius: 50%;
+  }
+
+  div.partner-scroller ul:hover {
+    animation-play-state: paused;
+  }
+
+  main {
+    margin-top: 30px;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  main section {
+    /* background-color: #0a5580; */
+    display: flex;
+    justify-content: center;
+  }
+
+  main section > div {
+    padding: 20px;
+    /* background-color: aquamarine; */
+    width: 90%;
+  }
+
+  main section.top div div.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  main section.middle > div {
+    display: grid;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  main section.middle div div.philosophy {
+    padding: 20px;
+    background-color: var(--soft-yellowish);
+    border-radius: 20px;
+    display: grid;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  section.middle div div.philosophy ul {
+    list-style: none;
+  }
+
+  section.bottom div div.newsletter {
+    color: var(--beige-clr);
+    background: url("./media/images/mountain-lake-landscape.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  div.newsletter form {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  div.newsletter form input {
+    border: none;
+    height: 40px;
+    width: 70%;
+    border-radius: 10px;
+    font-size: 25px;
+  }
+
+  input::placeholder {
+    font-size: 25px;
+  }
+
+  form button {
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    width: 20%;
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  body {
+    background-color: var(--coal-clr);
+  }
+
+  div.container {
+    width: 1920px;
   }
 }
